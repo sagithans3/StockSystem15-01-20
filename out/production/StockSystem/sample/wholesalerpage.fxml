@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="590.0" prefWidth="1056.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ProductController">
+    <children>
+        <Pane prefHeight="141.0" prefWidth="1056.0" style="-fx-background-color: #000000;">
+            <children>
+                <Label layoutX="63.0" layoutY="34.0" prefHeight="74.0" prefWidth="808.0" text="Stock Management System - Wholesalers" textFill="WHITE">
+                    <font>
+                        <Font name="Comic Sans MS" size="40.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <Button layoutY="141.0" mnemonicParsing="false" onAction="#backToHome" prefHeight="43.0" prefWidth="126.0" text="Back" />
+        <TableView fx:id="productTable" layoutX="132.0" layoutY="184.0" prefHeight="328.0" prefWidth="851.0">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="53.0" text="ID" />
+                <TableColumn fx:id="productNameColumn" onEditCommit="#editProductName" prefWidth="296.0" text="Name" />
+                <TableColumn fx:id="productQuantityColumn" onEditCommit="#editQuantity" prefWidth="233.0" text="Surname" />
+                <TableColumn fx:id="productPriceColumn" minWidth="0.0" onEditCommit="#editPrice" prefWidth="235.0" text="Form" />
+            </columns>
+        </TableView>
+        <HBox layoutX="128.0" layoutY="521.0" prefHeight="35.0" prefWidth="695.0">
+            <children>
+                <TextField fx:id="idField" prefHeight="30.0" prefWidth="39.0" promptText="ID" />
+                <TextField fx:id="productNameField" prefHeight="30.0" prefWidth="200.0" promptText="Enter Name" />
+                <TextField fx:id="quantityField" prefHeight="29.0" prefWidth="249.0" promptText="Enter surname">
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </TextField>
+                <TextField fx:id="priceField" prefHeight="29.0" prefWidth="179.0" promptText="Enter form" />
+            </children>
+        </HBox>
+        <Button layoutX="823.0" layoutY="521.0" mnemonicParsing="false" onAction="#addButton" prefHeight="29.0" prefWidth="49.0" text="Add" />
+        <Button layoutX="872.0" layoutY="521.0" mnemonicParsing="false" onAction="#deleteButton" prefHeight="29.0" prefWidth="58.0" text="Delete" />
+        <Button layoutX="930.0" layoutY="521.0" mnemonicParsing="false" onAction="#editButton" prefHeight="29.0" prefWidth="58.0" text="Edit" />
+        <TextField fx:id="searchField" layoutX="234.0" layoutY="145.0" prefHeight="35.0" prefWidth="707.0" />
+        <Text layoutX="154.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search:" wrappingWidth="80.0">
+            <font>
+                <Font size="22.0" />
+            </font>
+        </Text>
+    </children>
+</AnchorPane>
